@@ -36,6 +36,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   container: {
+    flex: 1,
     maxHeight: 320,
   },
 });

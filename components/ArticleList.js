@@ -10,11 +10,11 @@ import {
 
 import styles from '../styles/stories.style';
 
-const HeartIcon = (style: ImageStyle): IconElement => (
+const HeartIcon = (style) => (
   <Icon {...style} name='heart'/>
 );
 
-const MessageCircleIcon = (style: ImageStyle): IconElement => (
+const MessageCircleIcon = (style) => (
   <Icon {...style} name='message-circle-outline'/>
 );
 const data = [
@@ -31,13 +31,23 @@ const data = [
     {
         title: 'Makan lahap pake kentang dan ayam',
         subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
+        image: 'https://i1.lensdump.com/i/ZPm4Wm.jpg'
+    },
+    {
+        title: 'Jalan jalan depan rumah',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
         image: 'https://i.lensdump.com/i/ZPm9H1.jpg'
     },
     {
-        title: 'Beli sepeda bareng Ayah',
-        subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-        illustration: 'https://i3.lensdump.com/i/ZPmJ5x.jpg'
-    }
+        title: 'Petik daun kering',
+        subtitle: 'Lorem ipsum dolor sit amet',
+        image: 'https://i2.lensdump.com/i/ZPmK9i.jpg'
+    },
+    {
+      title: 'Seharian di rumah nenek',
+      subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
+      image: 'https://i3.lensdump.com/i/ZPmpvo.jpg'
+  },
 ];
 
 export default class ArticleList  extends Component {
@@ -46,11 +56,11 @@ export default class ArticleList  extends Component {
      // <ListItem title={`${item.title} ${index + 1}`}/>
    // );
 
-    isItemReverse = (index: number): boolean => {
+    isItemReverse = (index) => {
     return index % 2 === 1;
     };
 
-    onItemPress = (index: number): void => {
+    onItemPress = (index) => {
       //navigation && navigation.navigate('Article3');
     };
     renderArticleItem = ({item, index}) => (
@@ -62,6 +72,27 @@ export default class ArticleList  extends Component {
           style={styles.itemSection}
           source={{uri:item.image}}
         />
+        <View style={styles.itemSection}>
+          <Text
+            style={styles.itemTitle}
+            category='h6'>
+            {item.title}
+          </Text>
+          <View style={styles.activityContainer}>
+            <Avatar 
+             source={require('../assets/image-profile.jpg')}/>
+            <View style={styles.authoringInfoContainer}>
+              <Text>
+                {"cerita ayah"}
+              </Text>
+              <Text
+                appearance='hint'
+                category='p2'>
+                {"20 Sept 2021"}
+              </Text>
+            </View>
+          </View>
+        </View>
       </TouchableOpacity>
     );
 

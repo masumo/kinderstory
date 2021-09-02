@@ -30,7 +30,7 @@ const renderItem = ({ item, index }) => (
     <SafeAreaView style={{ flex: 1 }}>
       <TopNavigation title='MyApp' alignment='center'/>
       <Divider/>
-      <Layout>
+      <Layout style={{ flex: 1 }}>
         <SlideShow/>
         <ArticleList/>
       </Layout>
