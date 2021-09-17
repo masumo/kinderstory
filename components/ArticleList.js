@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 
 import styles from '../styles/stories.style';
+import {MUSA} from '../static/entries';
+import SlideShow from './SlideShow';
 
 const HeartIcon = (style) => (
   <Icon {...style} name='heart'/>
@@ -17,38 +19,7 @@ const HeartIcon = (style) => (
 const MessageCircleIcon = (style) => (
   <Icon {...style} name='message-circle-outline'/>
 );
-const data = [
-    {
-        title: 'Hapal lagu gara-gara nonton youtube',
-        subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-        image: 'https://i2.lensdump.com/i/ZPmRsM.jpg'
-    },
-    {
-        title: 'Menangis terus-terusan',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        image: 'https://i3.lensdump.com/i/ZPmJ5x.jpg'
-    },
-    {
-        title: 'Makan lahap pake kentang dan ayam',
-        subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
-        image: 'https://i1.lensdump.com/i/ZPm4Wm.jpg'
-    },
-    {
-        title: 'Jalan jalan depan rumah',
-        subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
-        image: 'https://i.lensdump.com/i/ZPm9H1.jpg'
-    },
-    {
-        title: 'Petik daun kering',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        image: 'https://i2.lensdump.com/i/ZPmK9i.jpg'
-    },
-    {
-      title: 'Seharian di rumah nenek',
-      subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-      image: 'https://i3.lensdump.com/i/ZPmpvo.jpg'
-  },
-];
+
 
 export default class ArticleList  extends Component {
    
@@ -104,8 +75,9 @@ export default class ArticleList  extends Component {
       return (
         <List
           style={styles.container}
-          data={data}
+          data={MUSA}
           renderItem={this.renderArticleItem}
+          ListHeaderComponent={SlideShow}
         />
       )
     }

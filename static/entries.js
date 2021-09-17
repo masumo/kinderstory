@@ -63,3 +63,93 @@ export const ENTRIES2 = [
         illustration: 'https://i.imgur.com/l49aYS3l.jpg'
     }
 ];
+
+export const MUSA = [
+    {
+        title: 'Hapal lagu gara-gara nonton youtube',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
+        image: 'https://i2.lensdump.com/i/ZPmRsM.jpg'
+    },
+    {
+        title: 'Menangis terus-terusan',
+        subtitle: 'Lorem ipsum dolor sit amet',
+        image: 'https://i3.lensdump.com/i/ZPmJ5x.jpg'
+    },
+    {
+        title: 'Makan lahap pake kentang dan ayam',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
+        image: 'https://i1.lensdump.com/i/ZPm4Wm.jpg'
+    },
+    {
+        title: 'Jalan jalan depan rumah',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
+        image: 'https://i.lensdump.com/i/ZPm9H1.jpg'
+    },
+    {
+        title: 'Petik daun kering',
+        subtitle: 'Lorem ipsum dolor sit amet',
+        image: 'https://i2.lensdump.com/i/ZPmK9i.jpg'
+    },
+    {
+      title: 'Seharian di rumah nenek',
+      subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
+      image: 'https://i3.lensdump.com/i/ZPmpvo.jpg'
+  },
+];
+
+export const PHOTOS = 
+["https://i2.lensdump.com/i/ZPmRsM.jpg", "https://i.lensdump.com/i/ZPm9H1.jpg", 
+"https://i3.lensdump.com/i/ZPmJ5x.jpg", "https://i1.lensdump.com/i/ZPm4Wm.jpg", 
+"https://i.lensdump.com/i/ZPm9H1.jpg", "https://i2.lensdump.com/i/ZPmK9i.jpg", 
+"https://i3.lensdump.com/i/ZPmpvo.jpg"];
+
+
+export const GALLERYDATA = [
+    {
+        uri: "https://i2.lensdump.com/i/ZPmRsM.jpg",
+        title: "www.luehangs.site",
+        description: "Test 2",
+        // dimensions: { width: 1080, height: 1920 }
+    },
+    {
+        URI: "https://i.lensdump.com/i/ZPm9H1.jpg",
+        id: "xbg72uclk",
+        title: "www.luehangs.site",
+        description: "Test 3",
+        // dimensions: { width: 1080, height: 1920 }
+    },
+    {
+        url: "https://i3.lensdump.com/i/ZPmJ5x.jpg",
+        title: "www.luehangs.site",
+        description: "Test 4",
+        // dimensions: { width: 1080, height: 1920 }
+    },
+    {
+        URL: "https://i1.lensdump.com/i/ZPm4Wm.jpg",
+        id: idGenerator(),
+        title: "www.luehangs.site",
+        description: "Test 5",
+        // dimensions: { width: 1080, height: 1920 }
+    },
+    {
+        uri: "https://i.lensdump.com/i/ZPm9H1.jpg",
+        title: "www.luehangs.site",
+        description: "Test 6",
+        // dimensions: { width: 1920, height: 1080 }
+    },
+    {
+        uri: "https://i2.lensdump.com/i/ZPmK9i.jpg",
+        title: "www.luehangs.site",
+        description: "Test 7",
+        // dimensions: { width: 1920, height: 1080 }
+    },
+    {
+        uri: "https://i3.lensdump.com/i/ZPmpvo.jpg",
+        title: "www.luehangs.site",
+        description: "Test 8",
+        // dimensions: { width: 1080, height: 1920 }
+    }
+];
+function idGenerator() {
+    return Math.random().toString(36).substr(2, 9);
+}

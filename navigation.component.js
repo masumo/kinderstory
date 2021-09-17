@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreen } from './home.component';
 import { DetailsScreen } from './details.component';
+import { GalleryScreen } from './gallery.component';
 import { BottomNavigation, BottomNavigationTab, Icon } from '@ui-kitten/components';
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -33,7 +34,7 @@ const BottomTabBar = ({ navigation, state }) => (
 const TabNavigator = () => (
   <Navigator tabBar={props => <BottomTabBar {...props} />}>
     <Screen name='Home' component={HomeScreen}/>
-    <Screen name='Gallery' component={DetailsScreen}/>
+    <Screen name='Gallery' component={GalleryScreen}/>
     <Screen name='Notes' component={DetailsScreen}/>
   </Navigator>
 );

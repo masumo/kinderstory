@@ -18,8 +18,8 @@ _renderItem ({item, index}) {
 layoutExample (title, subtitle, type) {
     const isTinder = type === 'tinder';
     return (
-        <Layout style={[styles.exampleContainer, isTinder ? styles.exampleContainerDark : styles.exampleContainerLight]}>
-            <Text style={[styles.title, isTinder ? {} : styles.titleDark]}>{title}</Text>
+      <>
+           <Text style={[styles.title, isTinder ? {} : styles.titleDark]}>{title}</Text>
             <Text style={[styles.subtitle, isTinder ? {} : styles.titleDark]}>{subtitle}</Text>
             <Carousel
               data={isTinder ? ENTRIES2 : ENTRIES1}
@@ -31,16 +31,17 @@ layoutExample (title, subtitle, type) {
               layout={type}
               loop={true}
             />
-        </Layout>
+      </>
     );
   }
 
   render () {
     const example3 = this.layoutExample('Musa Fawzan Karim', 'Ceritafoto', 'stack');
     return (
-      <>
+      <Layout style={[styles.exampleContainer, styles.exampleContainerLight]}>
         { example3 }
-      </>
+        <Text style={[styles.title, styles.titleDark]}>Cerita Musa</Text>
+      </Layout>
     )
   }
 
